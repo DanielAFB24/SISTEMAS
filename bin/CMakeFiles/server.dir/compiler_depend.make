@@ -242,7 +242,13 @@ CMakeFiles/server.dir/server.cpp.o: ../server.cpp \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/mutex \
   /usr/include/c++/11/bits/std_mutex.h \
-  /usr/include/c++/11/bits/unique_lock.h
+  /usr/include/c++/11/bits/unique_lock.h \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h
 
 CMakeFiles/server.dir/utils.cpp.o: ../utils.cpp \
   /usr/include/stdc-predef.h \
@@ -489,6 +495,12 @@ CMakeFiles/server.dir/utils.cpp.o: ../utils.cpp \
 
 
 ../utils.cpp:
+
+/usr/include/c++/11/bits/stl_heap.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/c++/11/bits/unique_lock.h:
 
@@ -750,6 +762,8 @@ CMakeFiles/server.dir/utils.cpp.o: ../utils.cpp \
 
 ../server.cpp:
 
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
@@ -834,6 +848,8 @@ CMakeFiles/server.dir/utils.cpp.o: ../utils.cpp \
 
 /usr/include/strings.h:
 
+/usr/include/c++/11/algorithm:
+
 /usr/include/c++/11/backward/binders.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
@@ -867,6 +883,8 @@ CMakeFiles/server.dir/utils.cpp.o: ../utils.cpp \
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
