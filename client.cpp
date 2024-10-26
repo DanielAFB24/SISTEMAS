@@ -65,6 +65,8 @@ int main(int argc,char** argv)
     bool salir = false;
 
     //pedimos el nombre del usuario por terminal
+    std::cout << "Para poder dirigir mensajes privados es necesario comenzar con un arroba seguido del usuario como se muestra en el suguiente ejemplo"<< std::endl;
+    std::cout << "@Alex mensaje" << std::endl;
     std::cout << "Introduzca el nombre de usuario" << std::endl;
     std::getline(std::cin, nombreUsuario);
 
