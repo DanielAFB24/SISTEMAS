@@ -31,6 +31,13 @@ void recibeMensajeClientes(int serverId, bool& salir){
             //redimencionar y almacenar mensaje del cliente
             unpackv<char> (buffer, (char*) mensaje.data(), mensaje.size());
 
+            //SEÑAL QUE RECIBIMOS DEL SERVIDIOR PARA NOTIFICAR QUE DEBEMOS CERRAR LA CONEXION
+            //DE ESTA FORMA EVITAMOS  QUE EL BUCLE SIGA ESPERANDO UN MENSAJE DE UNA CONEXION QUE YA HA SIDO CERRADA
+            if(mensaje == "EXIT_SERVER"){
+                salir = true;
+                break;
+            }
+
             //mostar mensaje recibido
             std::cout << "Mensaje recibido : " << nombreUsuario << " dice : " << mensaje << std::endl;
         }else{

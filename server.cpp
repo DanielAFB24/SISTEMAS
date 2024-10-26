@@ -33,7 +33,7 @@
       recvMSG(clientId, buffer);
       //Si hay datos en el buffer recibir
 
-      if(buffer.size()){
+      if(buffer.size() > 0){
          //Desempaquetamos el mensaje
          mensaje.resize(unpack<int>(buffer));
          unpackv<char> (buffer, (char*) mensaje.data(), mensaje.size());
@@ -65,6 +65,17 @@
          mensaje = "exit()";
       }
    }while(mensaje != "exit()");
+
+   //Creamos mensajes para cerrar el servidor
+   std::string closeMessage = "EXIT_SERVER";
+   //Empaquetamos el mensaje de error SOLUCION AL PROBLEMA 2 PUNTOS ADICIONALES
+   pack(buffer, (int)nombreUsuario.size());
+   pack(buffer, (int)closeMessage.size());
+   packv(buffer, (char*)nombreUsuario.data(), nombreUsuario.size());
+   packv(buffer, (char*)closeMessage.data(), closeMessage.size());
+   //ENVIAMOS LA SEÑAL AL CLIENTE DE QUE VAMOS A CERRAR LA CONEXION
+   sendMSG(clientId, buffer);
+
     
    //Eliminar cliente de la lista 
    users.erase(std::find(users.begin(), users.end(), clientId));
